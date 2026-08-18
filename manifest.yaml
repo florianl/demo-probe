@@ -6,7 +6,7 @@ dist:
   output_path: ./dist
 
 extensions:
-  - gomod: github.com/florianl/demo-probe v0.0.0
+  - gomod: github.com/florianl/demo-probe v0.0.0-20260818104034-ce916cffc7be
     import: github.com/florianl/demo-probe/demoprobe
 
 receivers:
@@ -24,4 +24,3 @@ providers:
 
 replaces:
   - go.opentelemetry.io/ebpf-profiler => github.com/florianl/opentelemetry-ebpf-profiler v0.0.0-20260818103543-154626e3d75e
-  - github.com/florianl/demo-probe => /home/flehner/go/src/github.com/florianl/demo-probe

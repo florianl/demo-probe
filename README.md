@@ -54,8 +54,6 @@ sudo ./dist/otelcol-demo-probe \
   --feature-gates=+service.profilesSupport
 ```
 
-Root (or `CAP_BPF` + `CAP_PERFMON`) is required to load eBPF programs.
-
 ## License
 
 - Go source files: Apache License 2.0 (see `LICENSE`)
