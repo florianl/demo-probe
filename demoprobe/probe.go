@@ -1,3 +1,5 @@
+// Package demoprobe implements an OpenTelemetry Collector extension that
+// loads and manages an eBPF-based demo probe.
 package demoprobe // import "github.com/florianl/demo-probe/demoprobe"
 
 // Config holds the YAML configuration for the demoprobe extension.
