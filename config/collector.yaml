@@ -1,0 +1,28 @@
+# OpenTelemetry Collector configuration for the demo-probe extension.
+#
+# The demoprobe extension attaches a kprobe to sys_getrandom and emits a
+# profile sample (random u64, optionally reduced modulo N) on each syscall.
+#
+#   sudo ./dist/otelcol-demo-probe \
+#     --config=config/collector.yaml \
+#     --feature-gates=+service.profilesSupport
+
+extensions:
+  demoprobe:
+    modulo: 100   # reduce each sample value to [0, 100); set to 0 to disable
+
+receivers:
+  profiling:
+    probes:
+      - demoprobe
+
+exporters:
+  debug:
+    verbosity: detailed
+
+service:
+  extensions: [demoprobe]
+  pipelines:
+    profiles:
+      receivers: [profiling]
+      exporters: [debug]

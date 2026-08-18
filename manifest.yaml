@@ -1,0 +1,27 @@
+dist:
+  module: github.com/florianl/demo-probe/cmd/otelcol-demo-probe
+  name: otelcol-demo-probe
+  description: OpenTelemetry Collector with the demo-probe extension bundled in.
+  version: dev
+  output_path: ./dist
+
+extensions:
+  - gomod: github.com/florianl/demo-probe v0.0.0
+    import: github.com/florianl/demo-probe/demoprobe
+
+receivers:
+  - gomod: go.opentelemetry.io/ebpf-profiler v0.0.202633
+    import: go.opentelemetry.io/ebpf-profiler/collector
+
+exporters:
+  - gomod: go.opentelemetry.io/collector/exporter/debugexporter v0.158.0
+  - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.158.0
+
+providers:
+  - gomod: go.opentelemetry.io/collector/confmap/provider/envprovider v1.64.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/fileprovider v1.64.0
+  - gomod: go.opentelemetry.io/collector/confmap/provider/yamlprovider v1.64.0
+
+replaces:
+  - go.opentelemetry.io/ebpf-profiler => github.com/florianl/opentelemetry-ebpf-profiler v0.0.0-20260818103543-154626e3d75e
+  - github.com/florianl/demo-probe => /home/flehner/go/src/github.com/florianl/demo-probe
