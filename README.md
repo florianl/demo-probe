@@ -29,7 +29,7 @@ See `config/collector.yaml` for a complete working example.
 
 ### Prerequisites
 
-- Go 1.25+
+- Go 1.26+
 - [clang](https://clang.llvm.org/) / [llvm](https://llvm.org/) for eBPF compilation
 - [bpf2go](https://github.com/cilium/ebpf/tree/main/cmd/bpf2go) (pulled automatically via `go generate`)
 - [ocb](https://github.com/open-telemetry/opentelemetry-collector/tree/main/cmd/builder) — the OTel Collector Builder
