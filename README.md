@@ -4,6 +4,9 @@ A demonstration of the external probe extension API for the
 [OpenTelemetry eBPF profiler](https://github.com/open-telemetry/opentelemetry-ebpf-profiler),
 built as a companion to [PR #1739](https://github.com/open-telemetry/opentelemetry-ebpf-profiler/pull/1739).
 
+> [!NOTE]
+> This repository was created to demonstrate a proposed change. Since [PR #1739](https://github.com/open-telemetry/opentelemetry-ebpf-profiler/pull/1739) has been merged into upstream `open-telemetry/opentelemetry-ebpf-profiler`, this repository is **no longer maintained**.
+
 ## What it does
 
 `demo-probe` is an OpenTelemetry Collector extension that:
